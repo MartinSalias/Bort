@@ -10,3 +10,4 @@ Scenario: Jugador presiona jugar
 	When presiono "Jugar"
 	Then debo ver "5"
 
+
