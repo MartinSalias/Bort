@@ -4,15 +4,19 @@ require_relative "lib/WinABort.rb"
 # root
 get '/' do
 	@@game = Puntos.new
-	@resultado = @@game.visualizarscore
-
+	@status = @@game.visualizarstatus
+	@ultcarta= @@game.visualizacarta
+	@scoreA=  @@game.visualizarscore
 	erb :home
 end
 
 # jugar
 post '/jugar' do
 	@@game.apuestaplayer 5
-	@resultado = @@game.visualizarscore
+
+	@ultcarta= @@game.visualizacarta
+	@scoreA=  @@game.visualizarscore
+	@status = @@game.visualizarstatus
 
 	erb :home
 end

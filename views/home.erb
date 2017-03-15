@@ -13,15 +13,21 @@
 <tr>
 <td style="width: 25%;" rowspan="2">&nbsp;</td>
 <td style="width: 50%;" rowspan="2">
-<h1 style="text-align: center;" name="textoprincipal"></h1>
+<h1 style="text-align: center;" >
+	<label name="status" id="status"><%= @status %></label> 
+</h1>
 </td>
 <td>
-<h1 style="text-align: center;" name="totaljugador"><%= @resultado %></h1>
+<h1 style="text-align: center;" name="totaljugador">
+	<label name="scoreA" id="scoreA"><%= @scoreA %></label> 
+</h1>
 </td>
 </tr>
 <tr>
 <td>
-<h2 style="text-align: center;" name="tirojugador"></h2>
+<h2 style="text-align: center;" name="tirojugador">
+	<label name="ultcarta" id="ultcarta"><%= @ultcarta %></label>
+</h2>
 </td>
 </tr>
 </tbody>
