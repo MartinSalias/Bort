@@ -37,6 +37,7 @@ class Puntos
 		else
 			if @scoreA > 21
 				@status = "PERDISTE"
+				@scoreA = 0
 			else
 				@status = "Seguis apostando ?"
 			end
