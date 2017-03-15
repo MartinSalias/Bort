@@ -9,13 +9,25 @@ get '/' do
 	@scoreA=  @@game.visualizarscore
 	erb :home
 end
-
+ 
 # jugar
 post '/jugar' do
-	@@game.apuestaplayer 5
+	@@game.apuestaplayer 0
 
 	@ultcarta= @@game.visualizacarta
 	@scoreA=  @@game.visualizarscore
+	@status = @@game.visualizarstatus
+
+	erb :home
+end
+
+# plantarse
+post '/plantarse' do
+	@scoreA=  @@game.visualizarscore
+	@ultcarta= @@game.visualizacarta
+
+	@@game.plantarse 0
+	@scorebort = @@game.visualizarscorebort
 	@status = @@game.visualizarstatus
 
 	erb :home
