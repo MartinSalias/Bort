@@ -43,6 +43,7 @@ class Puntos
 			if @scoreA > 21
 				@status = "PERDISTE"
 				@scoreA = 0
+				@plantarse = 1
 			else
 				@status = "Seguis apostando ?"
 			end
@@ -68,19 +69,18 @@ class Puntos
 
 	if  @plantarse == 0
 
-		if valor == 0
-			valor = Random.rand(15..21)
-		end			
+				if valor == 0
+					valor = Random.rand(15..21)
+				end			
 
-		@scorebort = valor
-		@plantarse = 1
+				@scorebort = valor
+				@plantarse = 1
 
 	else
-		@status = "Volver a jugar maricon"
+		@status = "Volve a jugar maricon"
 
 	end
 
 end
 end
-
 
