@@ -1,10 +1,13 @@
 class Puntos
 
 	def initialize
+
 		 @scoreA = 0
 		 @ultcarta = 0
 		 @status = "Comienza a jugar"
 		 @scorebort = 0
+		 @plantarse = 0
+
 	end
 
 	def visualizarscore
@@ -12,7 +15,7 @@ class Puntos
 	end
 
 	def apuestaplayer valor
-		
+	
 		 if @scorebort > 0
 				@scoreA = 0
 				@scorebort = 0
@@ -61,14 +64,21 @@ class Puntos
 
 	def plantarse valor
 
-			if valor == 0
-				valor = Random.rand(15..21)
-			end			
+	if  @plantarse == 0
+
+		if valor == 0
+			valor = Random.rand(15..21)
+		end			
 
 		@scorebort = valor
+		@plantarse = 1
+
+	else
+		@status = "Volver a jugar maricon"
 
 	end
 
+end
 end
 
 
