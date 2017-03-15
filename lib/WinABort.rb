@@ -15,7 +15,9 @@ class Puntos
 	end
 
 	def apuestaplayer valor
-	
+
+		@plantarse = 0	
+
 		 if @scorebort > 0
 				@scoreA = 0
 				@scorebort = 0
