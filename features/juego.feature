@@ -15,4 +15,13 @@ Scenario: Jugador presiona Plantarse
 	Given voy a la portada
 	Then debo ver "Plantarse"
 
+Scenario: Jugador se pasa
+	Given voy a la portada
+	When presiono "Jugar"
+	When presiono "Jugar"
+	When presiono "Jugar"
+	When presiono "Jugar"
+	When presiono "Jugar"
+	Then debo ver "PERDISTE"
+
 
